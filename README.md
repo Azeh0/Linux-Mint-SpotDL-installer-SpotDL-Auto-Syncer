@@ -21,7 +21,7 @@ pipx run spotdl "your link"
 
 # If you would like to sync
 ```
-pipx run spotdl sync "enter link here" --save-file [playlist name here].sync.spotdl
+pipx run spotdl sync [enter link here] --save-file [playlist name here].sync.spotdl
 
 # Example grabbed from the SpotDL Docs on how to sync
 pipx run spotdl sync https://open.spotify.com/playlist/37i9dQZF1E8UXBoz02kGID --save-file "the-weeknd.sync.spotdl"
