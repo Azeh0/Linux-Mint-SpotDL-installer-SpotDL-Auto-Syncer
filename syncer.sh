@@ -28,7 +28,7 @@ echo "Selected format: $FORMAT"
 echo "Dynamic part: $dynamic_part"
 
 while true; do
-    echo "Running pipx command..."
+    echo "Running SpotDL command..."
     pipx run spotdl sync "${dynamic_part}.sync.spotdl" --format $FORMAT --overwrite skip
     echo "Command executed, sleeping for 5 seconds..."
     sleep 5
