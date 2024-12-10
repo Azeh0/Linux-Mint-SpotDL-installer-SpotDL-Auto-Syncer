@@ -33,4 +33,6 @@ First download the syncer and place it in the directory where you would like you
 chmod +x syncer.sh
 ./syncer.sh
 ```
+# If you are on widows
+Place the syncer.bat in your music file folder and double click syncer.bat
 
