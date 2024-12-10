@@ -1,6 +1,5 @@
 #!/bin/bash
 
-set -x
 # Prompt the user to choose a format
 echo "Enter number for format:"
 echo "1) m4a"
@@ -22,7 +21,15 @@ case $choice in
     *) echo "Invalid choice, defaulting to m4a"; FORMAT="m4a" ;;
 esac
 
+# Prompt the user to input the dynamic part
+read -p "Enter the name of you synced file for examle; [name].sync.spotdl: " dynamic_part
+
+echo "Selected format: $FORMAT"
+echo "Dynamic part: $dynamic_part"
+
 while true; do
-    pipx run spotdl sync "btap.sync.spotdl" --format $FORMAT --overwrite skip
+    echo "Running pipx command..."
+    pipx run spotdl sync "${dynamic_part}.sync.spotdl" --format $FORMAT --overwrite skip
+    echo "Command executed, sleeping for 5 seconds..."
     sleep 5
 done
